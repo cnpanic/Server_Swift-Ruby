@@ -12,9 +12,11 @@
 		B201199620233F1800C97326 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B201199420233F1800C97326 /* Main.storyboard */; };
 		B201199820233F1800C97326 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B201199720233F1800C97326 /* Assets.xcassets */; };
 		B201199B20233F1800C97326 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B201199920233F1800C97326 /* LaunchScreen.storyboard */; };
+		F6524D812929022BCBF0E607 /* Pods_AFSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B935B4817B4A98993C1B640A /* Pods_AFSample.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		413D0446440257F22DAC89B6 /* Pods-AFSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AFSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AFSample/Pods-AFSample.debug.xcconfig"; sourceTree = "<group>"; };
 		B201198D20233F1800C97326 /* AFSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AFSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B201199020233F1800C97326 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B201199220233F1800C97326 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +24,8 @@
 		B201199720233F1800C97326 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B201199A20233F1800C97326 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B201199C20233F1800C97326 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B935B4817B4A98993C1B640A /* Pods_AFSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AFSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED0FF385D1620EC389496519 /* Pods-AFSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AFSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-AFSample/Pods-AFSample.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6524D812929022BCBF0E607 /* Pods_AFSample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		338AF354597934AEDDFBC57B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B935B4817B4A98993C1B640A /* Pods_AFSample.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		86E7FB2814F4D345F2E81D05 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				413D0446440257F22DAC89B6 /* Pods-AFSample.debug.xcconfig */,
+				ED0FF385D1620EC389496519 /* Pods-AFSample.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		B201198420233F1800C97326 = {
 			isa = PBXGroup;
 			children = (
 				B201198F20233F1800C97326 /* AFSample */,
 				B201198E20233F1800C97326 /* Products */,
+				86E7FB2814F4D345F2E81D05 /* Pods */,
+				338AF354597934AEDDFBC57B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B201199F20233F1800C97326 /* Build configuration list for PBXNativeTarget "AFSample" */;
 			buildPhases = (
+				38A7D3C2EE9CC07C91DCEC4A /* [CP] Check Pods Manifest.lock */,
 				B201198920233F1800C97326 /* Sources */,
 				B201198A20233F1800C97326 /* Frameworks */,
 				B201198B20233F1800C97326 /* Resources */,
+				25C1BFCB83FF5460BB916C8C /* [CP] Embed Pods Frameworks */,
+				D154BFF5634B79AC92ED4062 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,6 +157,60 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		25C1BFCB83FF5460BB916C8C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-AFSample/Pods-AFSample-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AFSample/Pods-AFSample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		38A7D3C2EE9CC07C91DCEC4A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AFSample-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D154BFF5634B79AC92ED4062 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AFSample/Pods-AFSample-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B201198920233F1800C97326 /* Sources */ = {
@@ -272,6 +353,7 @@
 		};
 		B20119A020233F1800C97326 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 413D0446440257F22DAC89B6 /* Pods-AFSample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -287,6 +369,7 @@
 		};
 		B20119A120233F1800C97326 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ED0FF385D1620EC389496519 /* Pods-AFSample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
